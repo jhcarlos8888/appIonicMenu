@@ -4,5 +4,13 @@ ion-toolbar{
 }
 
 .btnGoCustomers{
-    --background: var(--ion-color-warning-shade);
+    --background: var(--ion-color-primary);
+}
+
+
+.contenedor{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
 }

@@ -5,5 +5,11 @@ ion-toolbar{
 
 
 .btnGoHome{
-    --background: var(--ion-color-warning-shade);
+    --background: var(--ion-color-primary);
+}
+
+.contenedor{
+   justify-content: start;
+   display: flex;
+   
 }
