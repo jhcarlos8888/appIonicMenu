@@ -3,5 +3,10 @@
   "integrations": {
     "cordova": {}
   },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  },
   "type": "angular"
 }
