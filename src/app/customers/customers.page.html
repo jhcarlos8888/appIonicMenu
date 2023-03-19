@@ -6,11 +6,10 @@
 
 <ion-content>
 
-  <ion-list> 
-    <ion-list-header> 
+  <ion-list *ngIf="permisos">
+    <ion-list-header>
       Lista de customers
     </ion-list-header>
-
     <ion-item *ngFor="let user of users">
       <ion-avatar slot="start">
         <img src="../../assets/img-customers/{{user.image}}" alt="">
@@ -24,10 +23,14 @@
     </ion-item>
   </ion-list>
 
-  <div class="contenedor">
-    <ion-button class="btnGoHome" (click)="goToHome()">Go to Home</ion-button> 
+  <div *ngIf="!permisos" class="contenedor ion-justify-content-center ion-align-items-center
+  ion-text-center ion-padding-top ion-padding-bottom">
+
+    <ion-label class="ion-padding">No cuentas con permisos para visualizar este contenido</ion-label>
+
+    <ion-button class="btnGoHome" (click)="goToHome()">Volver al Home</ion-button>
   </div>
 
- 
+
 
 </ion-content>

@@ -1,0 +1,17 @@
+{
+    "data":[
+        {
+            "name": "Paris",
+            "image": ""
+        },
+        {
+            "name": "USA",
+            "image": ""
+        },
+        {
+            "name": "Chile",
+            "image": ""
+        }
+
+    ]
+}

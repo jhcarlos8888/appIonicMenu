@@ -12,11 +12,16 @@ export class CustomersPage implements OnInit {
 
   users: any = [];
 
+  permisos: boolean = false;
+
 
   constructor(private router: Router,
-    private http: HttpClient) { }
+    private http: HttpClient) {
+
+     }
 
   ngOnInit() {
+    this.permisos = true;
     this.getUsers().subscribe((res) =>{
       console.log("Respuesta de peticion",res)
       this.users = res;
