@@ -37,18 +37,7 @@ ion-menu.md ion-list#inbox-list ion-list-header {
   min-height: 20px;
 }
 
-ion-menu.md ion-list#inbox-list ion-list-header#listHeaderText .list-header-inner{
-  
-  
-    font-size: 22px;
-  font-weight: 600;
-  min-height: 20px;
-  align-items: center;
-  justify-content: center;
 
-    
-  
-}
 
 ion-menu.md ion-list#labels-list ion-list-header {
   font-size: 16px;
@@ -83,9 +72,9 @@ ion-menu.md ion-item ion-icon {
 }
 
 ion-menu.md ion-item ion-label {
-  font-weight:bold;
+  font-weight: bold;
   font-size: 16px;
-  
+
 }
 
 ion-menu.ios ion-content {
