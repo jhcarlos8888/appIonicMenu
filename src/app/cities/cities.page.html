@@ -8,7 +8,7 @@
 
   <ion-row *ngIf="permisos">
     <ion-col  sizeXs="12" sizeMd="6" sizeLg="4" *ngFor="let city of cities">
-      <ion-card>
+      <ion-card (click)="alertSelectDelete()">
         <img class="imagesCard" src="../../assets/img-cities/{{city.image}}" alt="">
         <div class="card-title">{{city.name}}</div>
       </ion-card>

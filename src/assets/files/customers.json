@@ -14,9 +14,15 @@
             "image":"gamer.png"
          },
          {
-            "name": "Ana",
+            "name": "Maria",
             "state": "I love the finances",
             "description": "the money is better",
+            "image":"woman.png"
+         },
+         {
+            "name": "Isabella",
+            "state": "My dog is beautifull",
+            "description": "dogs is very pretty",
             "image":"woman.png"
          }
 
