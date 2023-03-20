@@ -1,16 +1,16 @@
 {
     "data":[
         {
-            "name": "Paris",
-            "image": ""
+            "name": "Lima",
+            "image": "lima.jpg"
         },
         {
-            "name": "USA",
-            "image": ""
+            "name": "Guatemala",
+            "image": "guatemala.jpg"
         },
         {
-            "name": "Chile",
-            "image": ""
+            "name": "Banquover",
+            "image": "banquover.jpg"
         }
 
     ]

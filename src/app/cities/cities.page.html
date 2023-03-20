@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row *ngIf="permisos">
+    <ion-col  sizeXs="12" sizeMd="6" sizeLg="4" *ngFor="let city of cities">
+      <ion-card>
+        <img class="imagesCard" src="../../assets/img-cities/{{city.image}}" alt="">
+        <div class="card-title">{{city.name}}</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+  <div *ngIf="!permisos" class="contSinPermisos ion-justify-content-center ion-align-items-center
+  ion-text-center ion-padding-top ion-padding-bottom">
+
+    <ion-label class="ion-padding">No cuentas con permisos para visualizar este contenido</ion-label>
+
+    <ion-button class="btnGoHome" (click)="goToHome()">Volver al Home</ion-button>
+  </div>
+</ion-content>
