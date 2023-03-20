@@ -1,0 +1,36 @@
+ion-toolbar{
+    --background: rgba(var(--ion-color-colorgris-rgb));
+    --color: var(--ion-color-dark);
+}
+
+ion-card{
+    border-radius: 15px;
+}
+
+.imagesCard{
+    height: 200px;
+    width: 100%;
+    
+}
+
+.card-title{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-desc{
+    font-size: 20px;
+    display: flex;
+    justify-content: center; 
+    margin: 10px;
+}
+
+.contSinPermisos{
+    flex-direction: column;
+    display: flex; 
+ }

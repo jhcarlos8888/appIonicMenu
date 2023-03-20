@@ -1,16 +1,22 @@
 {
     "data":[
         {
+            "id": 1,
             "name": "Lima",
-            "image": "lima.jpg"
+            "image": "lima.jpg",
+            "desc": "Una ciudad muy cultural"
         },
         {
+            "id": 2,
             "name": "Guatemala",
-            "image": "guatemala.jpg"
+            "image": "guatemala.jpg",
+            "desc": "Ciudad con muchas historias bonitas"
         },
         {
+            "id": 3,
             "name": "Banquover",
-            "image": "banquover.jpg"
+            "image": "banquover.jpg",
+            "desc": "Una potencia mundial"
         }
 
     ]
