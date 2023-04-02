@@ -4,18 +4,23 @@
   </ion-toolbar>
 
   <ion-toolbar>
-    <ion-searchbar placeholder="Buscar cliente" animated
-    (ionChange)="searchCustomer($event)">
+    <ion-searchbar placeholder="Buscar cliente" animated (ionChange)="searchCustomer($event)">
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <p class="ion-justify-content-center ion-align-items-center
+  ion-text-center">Pull this content down to trigger the refresh.</p>
 
   <ion-list *ngIf="permisos">
     <ion-list-header>
       Lista de customers
     </ion-list-header>
+
     <ion-item *ngFor="let user of searchedUser">
       <ion-avatar slot="start">
         <img src="../../assets/img-customers/{{user.image}}" alt="">

@@ -11,6 +11,8 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class CitiesPage implements OnInit {
 
+  token = localStorage.getItem('token');
+
   cities: any = [];
 
   permisos: boolean = false;
@@ -22,30 +24,33 @@ export class CitiesPage implements OnInit {
 
   ngOnInit() {
 
+    console.log("🚀 ~ file: cities.page.ts:15 ~ CitiesPage ~ token:", this.token);
+    localStorage.removeItem('token');
+    //localStorage.clear(); //para borrar todo el localstorage
     this.permisos = true;
-    this.getCities().subscribe((res) =>{
-      console.log("Respuesta de peticion",res)
+    this.getCities().subscribe((res) => {
+      console.log("Respuesta de peticion", res)
       this.cities = res;
     })
   }
 
 
-  goToHome(){
+  goToHome() {
     this.router.navigate(['/home'])
   }
 
-  getCities(){
+  getCities() {
     return this.http
-    .get('assets/files/cities.json')
-    .pipe(
-      map((res:any) =>{
-        return res.data;
-      })
-    )
+      .get('assets/files/cities.json')
+      .pipe(
+        map((res: any) => {
+          return res.data;
+        })
+      )
   }
 
 
-  async presentToast(){
+  async presentToast() {
     const toast = await this.toastController.create({
       message: "Ciudad seleccionada",
       duration: 1000
@@ -55,7 +60,7 @@ export class CitiesPage implements OnInit {
   }
 
 
-  async alertConfirmDelete(){
+  async alertConfirmDelete() {
     const alert = await this.alertController.create({
       header: "Mensaje de confirmacion",
       message: "Se ha borrado la ciudad correctamente!!!",
@@ -66,7 +71,7 @@ export class CitiesPage implements OnInit {
   }
 
 
-  async alertSelectDelete(){
+  async alertSelectDelete() {
 
     const alert = await this.alertController.create({
       header: "Borrar ciudad",
@@ -81,7 +86,7 @@ export class CitiesPage implements OnInit {
         },
         {
           text: "SI",
-          
+
           handler: () => {
             console.log("Eliminado")
           }
@@ -92,7 +97,7 @@ export class CitiesPage implements OnInit {
     await alert.present();
   }
 
-    
+
 }
 
 
