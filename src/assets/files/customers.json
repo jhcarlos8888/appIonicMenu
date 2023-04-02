@@ -1,0 +1,35 @@
+{
+
+    "data": [
+        {
+           "name": "juan",
+           "state": "I am Big person",
+           "description": "Listen I have had pretty messed up day..",
+           "image":"hacker.png"
+        },
+        {
+            "name": "Steban",
+            "state": "I like videogames",
+            "description": "Games its cool..",
+            "image":"gamer.png"
+         },
+         {
+            "name": "Maria",
+            "state": "I love the finances",
+            "description": "the money is better",
+            "image":"woman.png"
+         },
+         {
+            "name": "Isabella",
+            "state": "My dog is beautifull",
+            "description": "dogs is very pretty",
+            "image":"woman.png"
+         }
+
+
+    ]
+
+
+
+
+}

@@ -1,5 +1,12 @@
 {
   "name": "appIonicMenu",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  },
   "type": "angular"
 }

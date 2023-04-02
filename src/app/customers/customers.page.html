@@ -1,9 +1,47 @@
 <ion-header>
-  <ion-toolbar color="colorgris">
+  <ion-toolbar>
     <ion-title>customers</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar cliente" animated (ionChange)="searchCustomer($event)">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <p class="ion-justify-content-center ion-align-items-center
+  ion-text-center">Pull this content down to trigger the refresh.</p>
+
+  <ion-list *ngIf="permisos">
+    <ion-list-header>
+      Lista de customers
+    </ion-list-header>
+
+    <ion-item *ngFor="let user of searchedUser">
+      <ion-avatar slot="start">
+        <img src="../../assets/img-customers/{{user.image}}" alt="">
+      </ion-avatar>
+      <ion-icon slot="end" name="search-outline"></ion-icon>
+      <ion-label>
+        <h2>{{user.name}}</h2>
+        <h3>{{user.state}}</h3>
+        <p>{{user.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!permisos" class="contenedor ion-justify-content-center ion-align-items-center
+  ion-text-center ion-padding-top ion-padding-bottom">
+
+    <ion-label class="ion-padding">No cuentas con permisos para visualizar este contenido</ion-label>
+
+    <ion-button class="btnGoHome" (click)="goToHome()">Volver al Home</ion-button>
+  </div>
+
+
 
 </ion-content>

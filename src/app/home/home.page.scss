@@ -1,0 +1,16 @@
+ion-toolbar{
+    --background: rgba(var(--ion-color-colorgris-rgb));
+    --color: var(--ion-color-dark);
+}
+
+.btnGoCustomers{
+    --background: var(--ion-color-primary);
+}
+
+
+.contenedor{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
+}

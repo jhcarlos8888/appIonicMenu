@@ -1,3 +1,15 @@
 ion-toolbar{
-    background-color: var(--ion-color-colorgris);
+    --background: rgba(var(--ion-color-colorgris-rgb));
+    --color: var(--ion-color-dark);
+}
+
+
+.btnGoHome{
+    --background: var(--ion-color-primary);
+}
+
+.contenedor{
+   flex-direction: column;
+   display: flex;
+   
 }
